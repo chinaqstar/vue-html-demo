@@ -11,32 +11,6 @@
   <div id="example"></div>
 
   <!-- script -->
-  <script>
-    // 缓存模块
-    var store = (function() {
-      var modules = [];
-      return function(name, exports) {
-        if(arguments.length < 2 && typeof name === 'string') {
-					return modules[name];
-				}
-			 	modules[name] = exports;
-      }
-    })();
-
-    // 定义require
-    require = function(name) {
-      return store(name) || {};
-    }
-
-    // 定义define
-    define = function(id, cb) {
-      store(id, cb.call(this));
-    }
-
-  </script>
-  <script src="src/libs/vue/vue.js"></script>
-  <script src="src/views/components/home.js"></script>
-  <script src="src/views/components/hello.js"></script>
-  <script src="src/views/app.js"></script>
+  <script src="dist/app.js"></script>
 </body>
 </html>

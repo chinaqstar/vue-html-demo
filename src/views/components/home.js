@@ -1,17 +1,17 @@
-define('home', function(module) {
-  /**
-   * template
-   */
-  var homeHtml = '<div>this is home</div>';
+import Vue from 'vue';
 
-  /**
-   * 组件home
-   */
-  home = Vue.component('home', {
-    name: 'home',
-    template: homeHtml,
-    data() { return {} }
-  })
+/**
+ * template
+ */
+var homeHtml = '<div>this is home</div>';
 
-  return home;
+/**
+ * 组件home
+ */
+var home = Vue.component('home', {
+  name: 'home',
+  template: homeHtml,
+  data() { return {} }
 })
+
+export default home;

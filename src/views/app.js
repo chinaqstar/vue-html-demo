@@ -1,5 +1,6 @@
-var home = require('home');
-var hello = require('hello');
+import Vue from 'vue';
+import home from './components/home.js';
+import hello from './components/hello.js';
 
 /**
  * template 用来替换html中的<div id="example" />
