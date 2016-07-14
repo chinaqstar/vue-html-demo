@@ -6,7 +6,25 @@ import hello from './components/hello.js';
  * template 用来替换html中的<div id="example" />
  *
  */
-var appHtml = '<div class="example-nav"><nav><div class="nav-title"><h2><a href="#">Vue Demo</a></h2></div><ul class="nav-list"><li><a @click.prevent="listClick(\'home\', $event)">home</a></li><li><a @click.prevent="listClick(\'hello\', $event)">hello</a></li></ul></nav></div><div class="example-container"><component :is="currentView"></component></div>';
+var appHtml = `
+<div class="example-nav">
+  <nav>
+    <div class="nav-title">
+      <h2>
+        <a href="#">Vue Demo</a></h2>
+    </div>
+    <ul class="nav-list">
+      <li>
+        <a @click.prevent="listClick('home', $event)">home</a></li>
+      <li>
+        <a @click.prevent="listClick('hello', $event)">hello</a></li>
+    </ul>
+  </nav>
+</div>
+<div class="example-container">
+  <component :is="currentView"></component>
+</div>
+`;
 
 /**
  *  vue 渲染模板，通过

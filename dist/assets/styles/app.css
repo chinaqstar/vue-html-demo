@@ -1,48 +1,40 @@
 * {
   box-sizing: border-box;
 }
-
-html,body {
+html,
+body {
   background-color: #eee;
   margin: 0;
   padding: 0;
 }
-
 .example-nav {
   position: absolute;
   width: 200px;
   height: 100%;
   background-color: #ccc;
 }
-
 .example-nav .nav-title {
   padding: 0 20px;
 }
-
 .example-nav .nav-title a {
   text-decoration: none;
   color: #999;
 }
-
 .example-nav .nav-list {
   padding: 0;
   height: 40px;
   line-height: 40px;
   font-size: 16px;
   color: #555;
-  /*font-weight: 700;*/
 }
-
 .example-nav .nav-list a {
   display: block;
   padding: 0 20px;
   cursor: pointer;
 }
-
 .example-nav .nav-list a:hover {
   background-color: #aaa;
 }
-
 .example-container {
   margin-left: 200px;
 }

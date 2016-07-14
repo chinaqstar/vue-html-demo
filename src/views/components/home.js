@@ -3,7 +3,7 @@ import Vue from 'vue';
 /**
  * template
  */
-var homeHtml = '<div>this is home</div>';
+var homeHtml = `<div>this is home</div>`;
 
 /**
  * 组件home
