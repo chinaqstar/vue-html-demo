@@ -6,4 +6,4 @@ vue学习demo
 - [简单的AMD分离出component](https://github.com/chinaqstar/vue-html-demo/tree/08bde0011d3a50527dbc134d2f9d188f4efde765)
 - [使用browserify分离出component](https://github.com/chinaqstar/vue-html-demo/tree/5c189c62f08895a9a02df5384b3bbf1eb331cb4f)
 - [koa + stylus + browserify 热部署](https://github.com/chinaqstar/vue-html-demo/tree/8cea4f914e61605549465a28ab3b5960e40cc820)
-- [vue-router钩子流程]()
+- [vue-router钩子流程](https://github.com/chinaqstar/vue-html-demo/tree/7e323ad55a7f64a32386068ad153396dd24768e7)
