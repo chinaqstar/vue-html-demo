@@ -1,13 +1,27 @@
-import Vue from 'vue';
-import home from './components/home.js';
-import hello from './components/hello.js';
+import home from './components/home.js'
+import hello from './components/hello.js'
+
+Vue.use(VueRouter)
+var router = new VueRouter()
+
+router.map({
+  '/home/:id': {
+      component: home
+  },
+  '/hello': {
+      component: hello
+  }
+})
+
+// router.afterEach(function (transition) {
+//   console.log('成功浏览到: ' + transition.to.path)
+// })
 
 /**
  * template 用来替换html中的<div id="example" />
- *
  */
 var appHtml = `
-<div class="example-nav">
+<div id="app" class="example-nav">
   <nav>
     <div class="nav-title">
       <h2>
@@ -15,16 +29,21 @@ var appHtml = `
     </div>
     <ul class="nav-list">
       <li>
-        <a @click.prevent="listClick('home', $event)">home</a></li>
+        <a v-link="{ path: '/home/1' }">home</a>
+      </li>
       <li>
-        <a @click.prevent="listClick('hello', $event)">hello</a></li>
+        <a v-link="{ path: '/hello' }">hello</a>
+      </li>
     </ul>
   </nav>
 </div>
 <div class="example-container">
-  <component :is="currentView"></component>
+  <!--<component :is="currentView"></component>-->
+  <router-view></router-view>
 </div>
 `;
+
+Vue.config.silent = true;
 
 /**
  *  vue 渲染模板，通过
@@ -38,6 +57,9 @@ var App = Vue.extend({
       currentView: 'home'
     }
   },
+  ready() {
+    console.log('app', this.currentView)
+  },
   components: {
     home,
     hello,
@@ -47,17 +69,19 @@ var App = Vue.extend({
       if(code == 'home') {
         this.currentView = 'home';
       } else if(code == 'hello') {
-        // console.log('hello');
         this.currentView = 'hello';
       }
     }
   }
 })
 
+router.start(App, '#example')
+
+
 /**
  *  挂载dom元素，相当于：
  *  new App().$mount("#example");
  */
-var app = new App({
-  el: '#example'
-})
+// var app = new App({
+//   el: '#example'
+// })

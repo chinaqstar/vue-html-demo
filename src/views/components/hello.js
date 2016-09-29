@@ -1,9 +1,11 @@
-import Vue from 'vue';
+// import Vue from 'vue';
 
 /**
  * template
  */
-var helloHtml = `<div>hello</div>`;
+var helloHtml = `
+<div id="hello">hello</div>
+`;
 
 /**
  * 组件hello
@@ -16,7 +18,10 @@ var hello = Vue.component('hello', function(resolve, reject) {
   resolve({
     name: 'hello',
     template: helloHtml,
-    data() { return {} }
+    data() { return {} },
+    ready() {
+      console.log('hello ready.');
+    }
   })
 })
 

@@ -14,11 +14,10 @@
     "koa-route": "^2.4.2",
     "koa-sendfile": "^2.0.0",
     "koa-static": "^2.0.0",
-    "stylus": "^0.54.5",
-    "vue": "^1.0.26"
+    "stylus": "^0.54.5"
   },
   "scripts": {
-    "dev": "watchify -vd -p browserify-hmr -e src/views/app.js -o dist/app.js & stylus -w src/assets/styles/style.styl -o dist/assets/styles/app.css & node devServer.js",
+    "dev": "watchify -vd -p browserify-hmr -e src/index.js -o dist/app.js & stylus -w src/assets/styles/style.styl -o dist/assets/styles/app.css & node devServer.js",
     "build": "cross-env NODE_ENV=production browserify -e src/index.js > dist/app.js && stylus src/assets/styles/style.styl -o dist/assets/styles/app.css",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -27,6 +26,6 @@
       "babelify"
     ]
   },
-  "author": "",
+  "author": "chinaqstar@gmail.com",
   "license": "ISC"
 }

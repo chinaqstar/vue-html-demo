@@ -22,7 +22,7 @@ app.use(route.get('/', function *() {
 // static
 app.use(serve(path.join(__dirname, './dist')));
 
-// start server, listen on 3999
-app.listen(3999, '0.0.0.0', function() {
-  console.log('start listen on port 3999');
+// start server, listen on 9999
+app.listen(9999, '0.0.0.0', function() {
+  console.log('start listen on port 9999');
 });
